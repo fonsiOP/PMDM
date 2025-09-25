@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contador',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './contador.html',
   styleUrl: './contador.css'
 })
@@ -11,11 +12,20 @@ export class Contador {
   numero:number = 10;
 
   incrementar(){
-    this.numero++;
+    if(this.numero<10){
+      this.numero++;
+    }else{
+      this.numero=10;
+    }
+
   }
 
   decrementar(){
-    this.numero--;
+    if(this.numero>0){
+      this.numero--;
+    }else{
+      this.numero=0;
+    }
   }
 
   resetear(){

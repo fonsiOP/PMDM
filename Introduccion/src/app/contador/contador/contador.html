@@ -1,4 +1,14 @@
+<div class="contendor">
+    <div *ngIf="numero > 1; else gris" class="circulo rojo"></div>
+    <div *ngIf="numero == 1; else gris" class="circulo naranja"></div>
+    <div *ngIf="numero == 0; else gris" class="circulo verde"></div>
+</div>
 <p class="num">{{ numero }}</p>
 <button (click)="incrementar()">+1</button>
 <button (click)="decrementar()">-1</button>
 <button (click)="resetear()">Reset</button>
+
+
+<ng-template #gris>
+  <div class="circulo gris"></div>
+</ng-template>
