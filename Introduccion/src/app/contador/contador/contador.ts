@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Contador {
 
-  numero:number = 0;
+  numero:number = 10;
 
   incrementar(){
     this.numero++;
@@ -16,6 +16,10 @@ export class Contador {
 
   decrementar(){
     this.numero--;
+  }
+
+  resetear(){
+    this.numero=10;
   }
 
 
