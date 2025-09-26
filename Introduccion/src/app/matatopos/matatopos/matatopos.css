@@ -25,7 +25,15 @@
     border-radius: 50%;
     cursor: pointer;
     border: solid 1px black;
-    animation: salirTopo 0.5s  ;
+    animation: salirTopo 0.5s;
+}
+
+.topo:hover{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(245, 0, 204);
+    border-radius: 50%;
+    cursor: pointer;
 
 }
 .no-topo{
@@ -34,14 +42,7 @@
     cursor: pointer;
 }
 
-.topo:hover{
-    width: 80px;
-    height: 80px;
-    background-color: rgb(176, 112, 235);
-    border-radius: 50%;
-    cursor: pointer;
 
-}
 
 .contador-puntos{
     background-color:aquamarine;
