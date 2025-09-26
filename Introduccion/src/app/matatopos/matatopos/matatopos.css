@@ -1,0 +1,66 @@
+.tablero{
+    width: 100%;
+    height: 100%;
+    background-color:aqua;
+    border: solid 2px black;
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows:repeat(3, 100px)
+}
+
+.casilla{
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topo{
+    width: 80px;
+    height: 80px;
+    background-color: blueviolet;
+    border-radius: 50%;
+    cursor: pointer;
+    border: solid 1px black;
+    animation: salirTopo 0.5s  ;
+
+}
+.no-topo{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.topo:hover{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(176, 112, 235);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.contador-puntos{
+    background-color:aquamarine;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+@keyframes salirTopo{
+    0%,100%{
+        width: 80px;
+        height: 80px;
+    }
+    50%{
+        width: 100px;
+        height: 100px;
+    }
+}

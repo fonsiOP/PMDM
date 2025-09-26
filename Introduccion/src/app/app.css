@@ -1,0 +1,10 @@
+.contendedor-root{
+    width: 100%;
+    height: 80vh;
+    background-color: antiquewhite;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
