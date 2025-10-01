@@ -1,17 +1,5 @@
 
 <div class="tablero">
-    <div class="casilla" *ngFor="let t of topos; let i = index">
-        <div *ngIf="t == 1; else noTopo" class="topo" (click)="mataTopo(i)"></div>
-    </div>
-</div>
-
-<div class="contador-puntos">{{ contador }}</div>
-<ng-template #noTopo>
-    <div class="no-topo" (click)="fallo()"></div>
-</ng-template>
-
-
-<!--<div class="tablero">
     @for(t of topos; track $index){
     <div class="casilla">
         @if(t == 1){
@@ -24,4 +12,17 @@
 
 </div>
 
-<div class="contador-puntos">{{contador}}</div> -->
+<div class="contador-puntos">{{contador}}</div>
+
+
+<!--<div class="tablero">
+    <div class="casilla" *ngFor="let t of topos; let i = index">
+        <div *ngIf="t == 1; else noTopo" class="topo" (click)="mataTopo(i)"></div>
+    </div>
+</div>
+
+<div class="contador-puntos">{{ contador }}</div>
+<ng-template #noTopo>
+    <div class="no-topo" (click)="fallo()"></div>
+</ng-template>
+-->
