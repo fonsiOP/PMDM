@@ -1,0 +1,62 @@
+.chibi{
+    width: 100px;
+    height: 100px;
+    background-image: url('/images/anubis.png');
+    cursor: pointer;
+    animation: run 1s steps(12) infinite;
+}
+.chibi2{
+    width: 100px;
+    height: 100px;
+    background-image: url('/images/old-guy.png');
+    animation: run 1s steps(12) infinite, animacion1 9.1s infinite;
+}
+.chibi3{
+    width: 100px;
+    height: 100px;
+    background-image: url('/images/hell-knight.png');
+    animation: run 1s steps(12) infinite, animacion1 8s infinite;
+}
+.chibi4{
+    width: 100px;
+    height: 100px;
+    background-image: url('/images/pirate.png');
+    animation: run 1s steps(12) infinite, animacion1 7s infinite;
+}
+.chibi5{
+    width: 100px;
+    height: 100px;
+    background-image: url('/images/succubus.png');
+    animation: run 1s steps(12) infinite, animacion1 6s infinite;
+}
+
+@keyframes animacion1{
+    0%{ 
+        transform: translateX(0) scaleX(1);   
+    }
+    25%{
+        transform: translateX(500px) scaleX(1); 
+    }
+    26%{
+        transform: translateX(500px) scaleX(-1)
+    }
+    75%{
+        transform: translateX(-500px) scaleX(-1);
+    }
+    76%{
+        transform: translateX(-500px) scaleX(1);
+    }
+    0%{ 
+        transform: translateX(0);   
+    }
+}
+
+
+@keyframes run{
+    0%{
+        background-position-x:0px;
+    }
+    100%{
+        background-position-x:-1200px;
+    }
+}
