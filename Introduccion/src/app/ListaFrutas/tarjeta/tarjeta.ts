@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Personaje } from '../../models/Personaje.model';
 
 @Component({
   selector: 'app-tarjeta',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './tarjeta.css'
 })
 export class Tarjeta {
+  @Input() frutita:string | undefined;
 
 }
