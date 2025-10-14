@@ -17,7 +17,8 @@ export class FormularioRegistro {
 
     this.formulario = this.fb.group({
       nombre: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(10)]],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email, Validators.minLength(3)]],
+      edad: ['', [Validators.required, Validators.min(0)]],
     });
 
   }

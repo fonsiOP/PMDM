@@ -1,9 +1,44 @@
 <form [formGroup]="formulario" (ngSubmit)="mostrar()">
-  <label for="nombre">Nombre:</label>
-  <input id="nombre" formControlName="nombre">
+  
 
+  <div class="contenedor-campo">
+    <label for="nombre">Nombre:</label>
+  <input id="nombre" formControlName="nombre">
+  @if(formulario.controls['nombre'].touched){
+  <div class="mensaje-error">
+    @if(formulario.controls['nombre'].hasError('required')) { <p>El campo nombre es obligatorio</p> }
+    @if(formulario.controls['nombre'].hasError('minlength')) { <p>Mínimo 3 letras</p> }
+    @if(formulario.controls['nombre'].hasError('maxlength')) { <p>Máximo 10 letras</p> }
+  </div>
+  }
+  </div>
+
+
+<div class="contenedor-campo">
   <label for="email">Email:</label>
   <input id="email" formControlName="email">
+  @if(formulario.controls['email'].touched){
+  <div class="mensaje-error">
+    @if(formulario.controls['email'].hasError('required')) { El campo email es obligatorio }
+    @if(formulario.controls['email'].hasError('email')) { No cumple con el formato de un email }
+    @if(formulario.controls['email'].hasError('minlength')) { Mínimo 3 letras }
+  </div>  
+    }   
+    </div>
+
+
+<div class="contenedor-campo">
+  <label for="edad">Edad:</label>
+  <input type="number" id="edad" formControlName="edad">
+  @if(formulario.controls['edad'].touched){
+  <div class="mensaje-error">
+    @if(formulario.controls['edad'].hasError('required')) { El campo edad es obligatorio }
+     @if(formulario.controls['edad'].hasError('min')) { La edad no es válida }
+  </div>  
+    }   
+    </div>
+
+
 
   <button type="submit">Enviar</button>
   <button type="button" (click)="resetear()">Resetear</button>
