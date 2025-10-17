@@ -7,3 +7,20 @@
 .opcion:hover{
         font-weight: 700;
 }
+
+.nav-halloween{
+  background-color: blueviolet;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .opcion2 {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .opcion1 {
+    display: none;
+  }
+}
