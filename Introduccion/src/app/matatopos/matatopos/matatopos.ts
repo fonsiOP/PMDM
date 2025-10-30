@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Consola } from '../../services/consola';
 
 
 @Component({
@@ -10,6 +11,10 @@ import { Component } from '@angular/core';
 })
 export class Matatopos {
 
+  constructor(private consola: Consola){
+
+  }
+
   topos:number[]=[0,0,0,0,1,0,0,0,0];
   contador:number=0;
 
@@ -18,6 +23,9 @@ export class Matatopos {
     this.topos=[0,0,0,0,0,0,0,0,0];
     this.topos[nuevoTopo]=1;
     this.contador++;
+    this.consola.incrementarTopoMuerto();
+    this.consola.mostrarEnConsola("Has matado un topo, llevas: "+this.consola.getToposMuertos());
+
   }
 
   devolverNuevoTopo(i:number){

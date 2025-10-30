@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Consola } from '../../services/consola';
 
 @Component({
   selector: 'app-contador',
@@ -8,6 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './contador.css'
 })
 export class Contador {
+
+  constructor(private consola: Consola){
+    
+  }
 
   numero:number = 10;
 
@@ -30,6 +35,8 @@ export class Contador {
 
   resetear(){
     this.numero=10;
+    this.consola.mostrarEnConsola("El contador se ha reseteado");
+    this.consola.resetearToposMuertos();
   }
 
 
