@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Personaje } from '../../models/Personaje.model';
 
 @Component({
@@ -9,5 +9,11 @@ import { Personaje } from '../../models/Personaje.model';
 })
 export class Tarjeta {
   @Input() frutita:string | undefined;
+  @Output() mensajeEnviado = new EventEmitter<string>();
+
+  enviarMensaje(){
+    this.mensajeEnviado.emit("Este mensaje llega desde el hijo: "+this.frutita);
+  }
+
 
 }

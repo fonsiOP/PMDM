@@ -15,6 +15,12 @@ export class Lista implements OnInit{
 
   personajes:Personaje[]=[];
 
+  mensajeRecibido:string="";
+
+  recibirMensaje(mensajeRecibido:string){
+    this.mensajeRecibido=mensajeRecibido;
+  }
+
 
   ngOnInit(): void {
 

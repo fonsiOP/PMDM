@@ -1,3 +1,5 @@
+
+{{mensajeRecibido}}
 @for (fruta of frutas; track fruta) {
-    <app-tarjeta [frutita]="fruta"></app-tarjeta>
+    <app-tarjeta [frutita]="fruta" (mensajeEnviado)="recibirMensaje($event)"></app-tarjeta>
 }
