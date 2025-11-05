@@ -19,6 +19,6 @@
 
 
 
-
-  <span class="opcion">	<mat-slide-toggle [(ngModel)]="esHalloween"></mat-slide-toggle></span>
+  <span class="opcion">	{{ nombre }}</span>
+  <span class="opcion" (click)="cambiarHalloween()">	<mat-slide-toggle [(ngModel)]="esHalloween"></mat-slide-toggle></span>
 </mat-toolbar>
